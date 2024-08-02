@@ -16,7 +16,7 @@ A C program to evaluate the strength of a given password based on length, charac
    
 6. Ensure you have the rockyou.txt file in the resources directory.
 7. Run the program:
-8. 
+ 
    ``./password_tester``
 
    
