@@ -30,9 +30,12 @@ A C program to evaluate the strength of a given password based on length, charac
 
 ## Features
 
-Length and Complexity Check: Ensures the password meets minimum length and includes a mix of uppercase, lowercase, digits, and special characters.
-Strength Evaluation: Calculates the possible combinations and estimated time required to decrypt the password.
-Common Password Check: Compares the password against a list of commonly used passwords.
-User Feedback: Provides feedback on how to improve password strength.
+`rgb(R,G,B)` Length and Complexity Check: `rgba(248, 71, 9, 0.8)` Ensures the password meets minimum length and includes a mix of uppercase, lowercase, digits, and special characters.
+
+`rgb(R,G,B)` Strength Evaluation: `rgba(248, 71, 9, 0.8)` Calculates the possible combinations and estimated time required to decrypt the password.
+
+`rgb(R,G,B)` Common Password Check: `rgba(248, 71, 9, 0.8)` Compares the password against a list of commonly used passwords.
+
+`rgb(R,G,B)` User Feedback: `rgba(248, 71, 9, 0.8)` Provides feedback on how to improve password strength.
 
    
