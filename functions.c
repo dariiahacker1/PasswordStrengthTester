@@ -41,11 +41,16 @@ void length_checker(const char *password, struct info *pswd_info) {
 
     //Numbers(10 different: 0-9), Letters(52 different: A-Z and a-z), Special characters (32 different)
     int possible_number_of_characters = 94;
-
     double possible_combinations = pow(possible_number_of_characters, (double) length_of_password);
 
+    double number_of_passwords_to_check = 0;
+
+    for(int i = 1; i <= length_of_password; i++){
+        number_of_passwords_to_check +=  pow(possible_number_of_characters, i);
+    }
+
     //500000 - average number of passwords that an attacker can test per second
-    double time_required_to_decrypt = possible_combinations / 500000.0;
+    double time_required_to_decrypt = number_of_passwords_to_check / 500000.0;
     double time = time_required_to_decrypt;
     char time_name[30] = "seconds";
 
@@ -63,7 +68,8 @@ void length_checker(const char *password, struct info *pswd_info) {
         strcpy(time_name, "minutes");
     }
 
-    printf("\nPOSSIBLE COMBINATIONS: %.0f\n", possible_combinations);
+    printf("\nPOSSIBLE PASSWORD COMBINATIONS %zu CHARACTERS LONG: %.0f\n", length_of_password, possible_combinations);
+    printf("NUMBER OF PASSWORDS THAT NEED TO BE CHECKED TO CRACK: %.0f\n", number_of_passwords_to_check);
     printf("TIME REQUIRED TO DECRYPT: %.2f %s\n", time, time_name);
 
 }
@@ -105,7 +111,7 @@ void conclusion(struct info *pswd_info) {
     } else if (pswd_info->length >= 8) {
         printf("Your password is moderate. Consider increasing its length and complexity for better security.\n");
     } else {
-        printf("\tYour password is very weak. It is highly recommended to choose a longer and more complex password.\n");
+        printf("Your password is very weak. It is highly recommended to choose a longer and more complex password.\n");
     }
 
     printf("#  ");
