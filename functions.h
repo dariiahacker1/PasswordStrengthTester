@@ -9,6 +9,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <math.h>
+#include <stddef.h>
 
 struct info{
     size_t length;
