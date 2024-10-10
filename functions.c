@@ -39,7 +39,7 @@ void length_checker(const char *password, struct info *pswd_info) {
     size_t length_of_password = strlen(password);
     pswd_info->length = length_of_password;
 
-    //Numbers(10 different: 0-9), Letters(52 different: A-Z and a-z), Special characters (32 different)
+    // Numbers(10 different: 0-9), Letters(52 different: A-Z and a-z), Special characters (32 different)
     int possible_number_of_characters = 94;
     double possible_combinations = pow(possible_number_of_characters, (double) length_of_password);
 
@@ -49,7 +49,7 @@ void length_checker(const char *password, struct info *pswd_info) {
         number_of_passwords_to_check +=  pow(possible_number_of_characters, i);
     }
 
-    //500000 - average number of passwords that an attacker can test per second
+    // 500000 - average number of passwords that an attacker can test per second
     double time_required_to_decrypt = number_of_passwords_to_check / 500000.0;
     double time = time_required_to_decrypt;
     char time_name[30] = "seconds";
